@@ -1,0 +1,21 @@
+<section>
+  <div class="card">
+    <h2>Panel Admin (Mini)</h2>
+    <p class="muted">Hanya untuk akun yang diberi hak admin di node <code>admins</code> (atur manual di Realtime DB atau via admin tools server-side).</p>
+
+    <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+      <input id="adminUid" class="input" placeholder="Masukkan UID user" />
+      <button class="btn" id="btnBlokir">Blokir User</button>
+      <button class="btn" id="btnCentang">Berikan Centang Biru</button>
+      <button class="btn" id="btnHapusPesan">Hapus Pesan Terpilih</button>
+    </div>
+
+    <p class="muted" style="margin-top:8px">Catatan: operasi sensitif seperti blokir/hapus harus diatur melalui fungsi admin di server atau rules yang valid. Demo ini hanya UI.</p>
+  </div>
+
+  <script>
+    document.getElementById('btnBlokir')?.addEventListener('click', ()=> showToast('Admin', 'Fungsi blokir user perlu integrasi admin server (demo).'));
+    document.getElementById('btnCentang')?.addEventListener('click', ()=> showToast('Admin', 'Fungsi verifikasi (centang biru) memerlukan update DB & validasi manual.'));
+    document.getElementById('btnHapusPesan')?.addEventListener('click', ()=> showToast('Admin', 'Hapus pesan butuh referensi pesan & izin admin di rules.'));
+  </script>
+</section>

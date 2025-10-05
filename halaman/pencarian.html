@@ -1,0 +1,20 @@
+<section>
+  <div class="card">
+    <h2>Pencarian</h2>
+    <p class="muted">Cari username pengguna atau nama grup. Hasil pencarian dapat dipilih untuk memulai percakapan.</p>
+
+    <div style="margin-top:8px;display:flex;gap:8px">
+      <input id="q" class="input" placeholder="Cari username atau nama grup..." />
+      <button class="btn" id="btnCari">Cari</button>
+    </div>
+  </div>
+
+  <div id="hasil" style="margin-top:12px"></div>
+</section>
+
+<script>
+  document.getElementById('btnCari')?.addEventListener('click', ()=>{
+    const q = document.getElementById('q');
+    q.dispatchEvent(new Event('input'));
+  });
+</script>

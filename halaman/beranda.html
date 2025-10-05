@@ -1,0 +1,26 @@
+<section>
+  <div class="card">
+    <h2>Beranda</h2>
+    <p class="muted">Daftar percakapan dan kontak aktifmu. Klik <strong>Buka</strong> pada salah satu percakapan untuk mulai chat.</p>
+  </div>
+
+  <div id="beranda-list"></div>
+
+  <div class="card" style="margin-top:12px;">
+    <h3>Buat Grup Baru</h3>
+    <p class="muted">Buat grup sederhana (masukkan nama grup & tambahkan anggota nanti).</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <input id="namaGrup" class="input" placeholder="Nama grup (contoh: Dev Squad)">
+      <button class="btn" id="btnBuatGrup">Buat Grup</button>
+    </div>
+    <p class="muted" style="margin-top:8px">*Untuk demo, grup akan dibuat sebagai percakapan baru. Di produksi, lakukan validasi anggota.</p>
+  </div>
+</section>
+
+<script>
+  document.getElementById('btnBuatGrup')?.addEventListener('click', ()=>{
+    const nama = document.getElementById('namaGrup').value.trim() || 'Grup Baru';
+    localStorage.setItem('newGroupTitle', nama);
+    showToast('Grup', `Siap membuat grup: ${nama}. Gunakan fitur Pencarian untuk menambahkan anggota.`);
+  });
+</script>
