@@ -1,0 +1,25 @@
+<section>
+  <div class="card">
+    <h2>Status (Story)</h2>
+    <p class="muted">Unggah gambar atau teks sebagai status yang hilang setelah 24 jam (fitur ini memerlukan Storage + logic server-side di produksi).</p>
+
+    <div style="margin-top:10px">
+      <input id="statusText" class="input" placeholder="Tulis status singkat..." />
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="btn" id="btnUploadStatus">Unggah Status</button>
+        <button class="btn" id="btnLihatStatus">Lihat Status Saya</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="status-list" style="margin-top:12px"></div>
+</section>
+
+<script>
+  document.getElementById('btnUploadStatus')?.addEventListener('click', ()=>{
+    showToast('Status', 'Fitur upload status membutuhkan integrasi Storage; belum aktif di demo ini.');
+  });
+  document.getElementById('btnLihatStatus')?.addEventListener('click', ()=>{
+    showToast('Status', 'Menampilkan status (demo).');
+  });
+</script>
