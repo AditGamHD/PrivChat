@@ -1,0 +1,31 @@
+{ 
+  // ============================================================
+  // Project   : UvoWorld
+  // Developer : ADITdeveloper
+  // Rules     : Firebase Realtime Database Security Rules
+  // Created   : 2025
+  // Expired   : Tahun 3000 (32503680000000 ms epoch)
+  // ------------------------------------------------------------
+  // Deskripsi :
+  // - Rules ini dibuat khusus untuk project UvoWorld
+  // - Dibuat oleh ADITdeveloper
+  // - Copyright (c) 2025 ADITdeveloper
+  // - Semua hak cipta dilindungi undang-undang
+  // ============================================================
+
+  "rules": {
+    // Hak akses read (membaca data)
+    // Rule aktif sampai tanggal 3000-01-01
+    ".read": "now < 32503680000000",  
+
+    // Hak akses write (menulis data)
+    // Rule aktif sampai tanggal 3000-01-01
+    ".write": "now < 32503680000000"  
+  }
+
+  // ============================================================
+  // Catatan tambahan:
+  // - Jika butuh rules tanpa batas waktu, bisa diganti dengan true
+  // - Jangan lupa update rules sesuai kebutuhan keamanan
+  // ============================================================
+}

@@ -1,0 +1,57 @@
+/* style.css - full CSS, modern, interactive, toast floating */
+/* Reset dasar */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0b1220;
+  --card:#0f1a2a;
+  --muted:#9aa4b2;
+  --primary:#39c0ff;
+  --accent:#6ee7b7;
+  --text:#e6eef6;
+  --toast-bg:rgba(18,20,28,0.96);
+  --radius:14px;
+  --glass: rgba(255,255,255,0.02);
+}
+html,body,#app{height:100%}
+body{
+  font-family: Inter, ui-sans-serif, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#07111b 0%, #081226 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+.app{max-width:980px;margin:0 auto;height:100vh;display:flex;flex-direction:column;border-left:1px solid rgba(255,255,255,0.02);border-right:1px solid rgba(255,255,255,0.02)}
+/* Header */
+#app-header{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-title{font-size:18px;font-weight:600}
+.header-actions{display:flex;gap:8px;align-items:center}
+/* Main area */
+.app-main{flex:1;overflow:auto;padding:14px}
+/* Footer nav */
+.app-footer{height:64px;border-top:1px solid rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:space-around;padding:8px}
+/* Buttons & icons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:var(--card);color:var(--text);cursor:pointer}
+.icon{width:20px;height:20px;display:inline-block;vertical-align:middle}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;padding:12px;margin-bottom:10px;border:1px solid rgba(255,255,255,0.03)}
+/* Login form */
+.login-wrap{max-width:420px;margin:40px auto;padding:18px;border-radius:12px;background:var(--card);box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.form-row{margin-bottom:10px}
+.input{width:100%;padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)}
+/* Chat bubble */
+.chat-window{display:flex;flex-direction:column;gap:10px;padding-bottom:8px}
+.bubble{max-width:72%;padding:10px 12px;border-radius:var(--radius);box-shadow:0 8px 20px rgba(2,6,23,0.6)}
+.bubble.me{margin-left:auto;background:linear-gradient(90deg,rgba(57,192,255,0.14),rgba(110,231,183,0.05));border:1px solid rgba(57,192,255,0.08)}
+.bubble.you{margin-right:auto;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
+.meta{font-size:12px;color:var(--muted);margin-top:6px;text-align:right}
+/* Input area */
+.input-area{display:flex;gap:8px;padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);align-items:center;position:sticky;bottom:0}
+.input-area input[type="text"]{flex:1;padding:10px 12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--text)}
+.icon-btn{width:44px;height:44px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.03);cursor:pointer}
+/* Toast container */
+.toast-container{position:fixed;right:20px;bottom:20px;z-index:9999;display:flex;flex-direction:column;gap:8px}
+.toast{min-width:220px;padding:12px 14px;border-radius:10px;background:var(--toast-bg);color:var(--text);box-shadow:0 8px 28px rgba(2,6,23,0.6);transform:translateY(10px);opacity:0;animation:toast-in .32s cubic-bezier(.2,.9,.2,1) forwards}
+@keyframes toast-in{to{transform:none;opacity:1}}
+.toast .title{font-weight:600;margin-bottom:6px}.toast .msg{font-size:13px;color:var(--muted)}
+/* small utilities */
+.hidden{display:none}
+/* responsive */
+@media(max-width:640px){#app-header,#app-footer{height:56px;padding:8px}.app{border-radius:0}}
