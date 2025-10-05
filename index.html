@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PrivChat — Aplikasi Chat</title>
+  <link rel="manifest" href="pwa/manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- SVG icon sprite (tidak pakai emoji) -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="icon-send" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79L20 21l1-1-5.5-6z"/></symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24"><path d="M19.14 12.94..."/></symbol>
+  </svg>
+
+  <div id="app" class="app">
+    <header id="app-header"></header>
+
+    <main id="app-main" class="app-main"></main>
+
+    <nav id="app-footer" class="app-footer"></nav>
+
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+  </div>
+
+  <!-- app.js akan import Firebase modul via CDN (type=module) -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
