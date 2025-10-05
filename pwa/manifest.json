@@ -1,0 +1,15 @@
+{
+  "name": "PrivChat",
+  "short_name": "PrivChat",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#07111b",
+  "theme_color": "#39c0ff",
+  "icons": [
+    {
+      "src": "../asset/profil/userdefault.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ]
+}
